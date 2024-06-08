@@ -1,0 +1,32 @@
+body {
+  background-color: #3e98cc;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  text-align: center;
+}
+
+button {
+  background-color: #ff6319;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#boton_pesos:hover {
+  background-color: #ee5c19;
+}
+form {
+  padding: 6px 16px;
+}
+input {
+  padding: 6px 16px;
+  border-radius: 20px;
+}
