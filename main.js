@@ -35,7 +35,7 @@ new Chart(ctx, {
         label: "# valor venta",
         data: datos.values,
         borderWidth: 1,
-        backgroundColor: "#ff6319",
+        backgroundColor: "orange",
       },
     ],
   },

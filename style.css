@@ -19,7 +19,7 @@ body {
   height: 300px;
 }
 button {
-  background-color: #ff6319;
+  background-color: #ffa500;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -28,7 +28,7 @@ button {
 }
 
 #boton_pesos:hover {
-  background-color: #ee5c19;
+  background-color: #e29300;
 }
 form {
   padding: 6px 16px;
