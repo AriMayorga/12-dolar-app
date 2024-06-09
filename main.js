@@ -1,4 +1,52 @@
 import "./style.css";
+import Chart from "chart.js/auto";
+const ctx = document.getElementById("myChart");
+
+import { Colors } from "chart.js";
+Chart.register(Colors);
+
+const obtenerDolares = async () => {
+  const url = "https://dolarapi.com/v1/dolares";
+  const request = await fetch("https://dolarapi.com/v1/dolares");
+  const data = await request.json();
+
+  let labels = [];
+  let values = [];
+
+  data.map((d) => {
+    labels.push(d.nombre);
+    values.push(d.venta);
+  });
+
+  return {
+    labels: labels,
+    values: values,
+  };
+};
+
+const datos = await obtenerDolares();
+
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: datos.labels,
+    datasets: [
+      {
+        label: "# valor venta",
+        data: datos.values,
+        borderWidth: 1,
+        backgroundColor: "#ff6319",
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+});
 
 const boton_pesos = document.getElementById("boton_pesos");
 const pesos = document.getElementById("pesos");
